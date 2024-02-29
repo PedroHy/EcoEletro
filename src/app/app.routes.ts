@@ -1,9 +1,19 @@
 import { Routes } from '@angular/router';
-//import { Login } from './screens/login/login.component'
-/*
+import { LoginComponent } from './screens/login/login.component';
+import { RegisterComponent } from './screens/register/register.component';
+import { MapComponent } from './screens/map/map.component';
+
 export const routes: Routes = [
     {
-        path: '/login'
-        component: Login
+        path: '/',
+        component: MapComponent
+    },
+    {
+        path: '/login',
+        component: LoginComponent
+    },
+    {
+        path: '/register',
+        component: RegisterComponent
     }
-];*/
+];
