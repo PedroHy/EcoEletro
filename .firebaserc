@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "training-5ad87": {
+      "hosting": {
+        "training": [
+          "training-5ad87"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "training-5ad87"
+  }
+}

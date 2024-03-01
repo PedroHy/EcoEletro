@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +8,11 @@ export class AuthService {
 
   user: any
 
-  constructor(private afAuth: AngularFireAuth) { }
-
+  constructor(private auth: Auth) { }
 
   singIn = async (email: string, password: string) => {
     try {
-      const result = await this.afAuth.signInWithEmailAndPassword(email, password);
+      const result = await signInWithEmailAndPassword(this.auth, email, password);
       this.user = result.user
     } catch (error) {
       console.error(error);
@@ -22,7 +21,7 @@ export class AuthService {
 
   singUp = async (email: string, password: string) => {
     try {
-      const result = await this.afAuth.createUserWithEmailAndPassword(email, password);
+      const result = await createUserWithEmailAndPassword(this.auth, email, password);
       this.user = result.user
     } catch (error) {
       console.error(error);

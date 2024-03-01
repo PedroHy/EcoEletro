@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,8 @@ export class LoginComponent {
   cnpj: string = ""
   password: string = ""
 
+  constructor(private authService: AuthService){}
+
   getCnpj(cnpj: string) {
     this.cnpj = cnpj
   }
@@ -20,6 +23,7 @@ export class LoginComponent {
   }
 
   buttonHandler() {
+    //this.authService.singIn(this.cnpj, this.password).then(()=>console.log("foi"));
     console.log(this.cnpj, this.password)
   }
 }
