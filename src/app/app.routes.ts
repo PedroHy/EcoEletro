@@ -5,15 +5,15 @@ import { MapComponent } from './screens/map/map.component';
 
 export const routes: Routes = [
     {
-        path: '/',
+        path: '',
         component: MapComponent
     },
     {
-        path: '/login',
+        path: 'login',
         component: LoginComponent
     },
     {
-        path: '/register',
+        path: 'register',
         component: RegisterComponent
     }
 ];
