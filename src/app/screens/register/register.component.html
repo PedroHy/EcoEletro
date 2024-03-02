@@ -1,1 +1,43 @@
-<p>register works!</p>
+<div class="w-full h-screen grid grid-cols-5 bg-gradient-to-br from-green-600 to-lime-800">
+    <div class="flex justify-center items-center col-span-3">
+        <div class="w-7/12 h-5/6 py-12 px-8 bg-emerald-50 rounded flex flex-col drop-shadow-md shadow-slate-300">
+            <h1 class="mb-8 text-3xl font-bold">CADASTRAR-SE</h1>
+
+            <form class="grow flex flex-col">
+                <fieldset class="w-full flex flex-col">
+                    <label class="mt-2 text-sm font-bold"
+                           for="cnpj">NOME</label>
+                    <input class="p-1 text-lg outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                           type="text"
+                           id="cnpj">
+                </fieldset>
+                <fieldset class="w-full flex flex-col">
+                    <label class="mt-2 text-sm font-bold"
+                           for="cnpj">EMAIL</label>
+                    <input class="p-1 text-lg outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                           type="text"
+                           id="cnpj">
+                </fieldset>
+                <fieldset class="w-full flex flex-col">
+                    <label class="mt-2 text-sm font-bold"
+                           for="password">SENHA</label>
+                    <input class="p-1 text-lg outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                           type="text"
+                           id="password">
+                </fieldset>
+
+                <fieldset class="mt-auto flex flex-col items-center">
+                    <button class="w-full p-2 text-xl text-green-50 bg-green-600 hover:bg-green-700">Realizar
+                        cadastro</button>
+                    <a class="text-green-900 hover:underline"
+                       href="/login">Realizar login</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="col-span-2 drop-shadow-md shadow-slate-300">
+        <img class="w-full h-screen block object-cover filter brightness-90"
+             src="../../../assets/planta.jpg"
+             alt="">
+    </div>
+</div>
