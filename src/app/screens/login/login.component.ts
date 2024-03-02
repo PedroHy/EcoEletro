@@ -13,7 +13,7 @@ export class LoginComponent {
   cnpj: string = ""
   password: string = ""
 
-  constructor(private authService: AuthService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router) { }
 
   getCnpj(cnpj: string) {
     this.cnpj = cnpj
@@ -24,6 +24,6 @@ export class LoginComponent {
   }
 
   buttonHandler() {
-    this.authService.singIn(this.cnpj, this.password).then(()=> this.router.parseUrl('/enterprise'))
+    this.authService.singIn(this.cnpj, this.password).then(() => this.router.parseUrl('/enterprise'))
   }
 }
