@@ -1,25 +1,40 @@
-<div class="w-full h-screen px-4 flex flex-col">
-    <!-- Nav -->
-    <nav class="flex justify-between">
-        <div>
-            Logo
-        </div>
-        <div>
-            <a href="">Sair</a>
-        </div>
-    </nav>
-    <!-- Content -->
-    <div class="flex flex-col">
-        <div>
-            Nome da empresa
-        </div>
-        <div class="flex">
-            <div>
-                Locais
+<div class="w-full h-screen p-12 grid grid-cols-8 gap-8 bg-gradient-to-br from-emerald-500 to-green-600">
+    <div class="col-span-3">
+        <!-- Logado como -->
+        <section class="p-8 rounded bg-green-50 relative">
+            <a class="absolute text-gray-400 text-3xl font-bold"
+               href="/">⤶</a>
+
+            <h2 class="text-3xl font-bold text-center">Nome da empresa</h2>
+            <p class="w-full mt-2 text-center text-gray-400 italic">email da empresa</p>
+
+            <button class="w-full p-2 mt-16 bg-rose-600 text-white rounded-sm">Sair</button>
+            <p class="w-full mt-2 text-center text-gray-400 italic">Data de criação</p>
+        </section>
+    </div>
+
+    <div class="col-span-5">
+        <!-- Locais -->
+        <section class="h-full rounded bg-green-50">
+            <div class="p-8 bg-green-100 flex rounded-t rounded-r justify-between items-center">
+                <h2 class="text-3xl font-bold">Editar Locais</h2>
+
+                <button class="p-2 bg-emerald-500 text-white">Adicionar</button>
             </div>
-            <div>
-                nada
+
+            <div class="p-8 pt-4 overflow-y-auto grid grid-cols-1 gap-4">
+                <div class="grid grid-cols-10">
+                    <div class="col-span-9">
+                        <p class="text-lg">Nome do local que pode ser um tanto assim</p>
+                        <p class="text-sm text-gray-400 italic">Endereço do local pequeno pq pode ser um puta dum
+                            endereço foda
+                        </p>
+                    </div>
+                    <div class="col-span-1">
+                        <button class="text-rose-600 hover:underline cursor-pointer">Excluir</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
 </div>
