@@ -1,17 +1,8 @@
 <div class="min-h-screen flex flex-col relative">
-    <nav class="w-full px-12 flex justify-between items-center 
-    bg-gradient-to-br from-emerald-500 to-green-600">
-        <div class="col-span-8 p-2">
-            <h1 class="text-3xl text-white font-bold">🍃EcoEletro</h1>
-            <p class="text-green-50"> Descarte dispositivos eletronicos</p>
-        </div>
-        <div class="col-span-2">
-            <a class="text-green-50 px-2 hover:underline"
-               href="/login">Adicionar local</a>
-        </div>
-    </nav>
+    <app-navbar />
 
     <div class="p-12 grow grid grid-cols-12 gap-8">
+        <!-- Map -->
         <div class="col-span-7">
             <iframe class="w-full h-full"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58620.76771252604!2d-46.60865213372427!3d-23.32308739208965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceedd93c780a1b%3A0x6e0c563ea659fc65!2sMairipor%C3%A3%2C%20SP%2C%2007600-000!5e0!3m2!1spt-BR!2sbr!4v1709296986193!5m2!1spt-BR!2sbr"
@@ -20,11 +11,17 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="col-span-5 p-8 bg-green-50">
-            <h2 class="text-xl font-bold">Locais mais próximos de Você</h2>
+        <!-- Locals -->
+        <div class="col-span-5 p-8 flex flex-col gap-y-4
+                  bg-green-50">
+            <h2 class="text-xl font-bold mb-4">Locais mais próximos de Você</h2>
+
+            <app-local *ngFor="let local of this.locals; index as i"
+                       [local]="local" />
         </div>
     </div>
 
+    <!-- Footer -->
     <p class="w-full italic text-xs text-gray-400 text-center absolute bottom-4">Todos os Direitos Reservados. © 2024
         Elias e Pedro</p>
 </div>
