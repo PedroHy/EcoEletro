@@ -4,20 +4,24 @@
             <h1 class="mb-8 text-3xl font-bold">LOGIN</h1>
 
             <!-- Form -->
-            <form class="grow flex flex-col">
+            <div class="grow flex flex-col">
                 <fieldset class="w-full flex flex-col">
                     <label class="mt-2 text-sm font-bold"
                            for="cnpj">EMAIL</label>
                     <input class="p-1 text-lg outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
                            type="text"
-                           id="cnpj">
+                           id="cnpj"
+                           [(ngModel)]="cnpj" 
+                           value={{cnpj}}>
                 </fieldset>
                 <fieldset class="w-full mt-4 flex flex-col">
                     <label class="mt-2 text-sm font-bold"
                            for="password">SENHA</label>
                     <input class="p-1 text-lg outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
                            type="text"
-                           id="password">
+                           id="password"
+                           [(ngModel)]="password" 
+                           value={{password}}>
                 </fieldset>
 
                 <fieldset class="w-full p-2">
@@ -28,11 +32,11 @@
                 </fieldset>
 
                 <fieldset class="mt-auto flex flex-col items-center">
-                    <button class="w-full p-2 text-xl text-green-50 bg-green-600 hover:bg-green-700">Entrar</button>
+                    <button (click)="buttonHandler()" class="w-full p-2 text-xl text-green-50 bg-green-600 hover:bg-green-700">Entrar</button>
                     <a class="text-green-900 hover:underline"
                        href="/register">Cadastrar-se</a>
                 </fieldset>
-            </form>
+            </div>
         </div>
     </div>
 

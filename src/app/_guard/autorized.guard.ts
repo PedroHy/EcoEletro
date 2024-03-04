@@ -9,7 +9,6 @@ export const autorizedGuard: CanActivateFn = (route, state) => {
   
   
   const authService = inject(AuthService);
-  const user = authService.getUser()
-  
-  return user ? true : router.parseUrl('/login')
+  const userId = authService.getUser()
+  return userId ? true : router.parseUrl('/login')
 };

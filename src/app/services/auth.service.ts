@@ -14,6 +14,7 @@ export class AuthService {
     try {
       const result = await signInWithEmailAndPassword(this.auth, email, password);
       this.user = result.user
+      localStorage.setItem("user", this.user.uid);
     } catch (error) {
       console.error(error);
     }
@@ -23,10 +24,14 @@ export class AuthService {
     try {
       const result = await createUserWithEmailAndPassword(this.auth, email, password);
       this.user = result.user
+      localStorage.setItem("user", this.user);
     } catch (error) {
       console.error(error);
     }
   }
 
-  getUser = () => this.user;
+  getUser = () => {
+    const uid = localStorage.getItem("user")
+    return uid ? true : false
+  };
 }

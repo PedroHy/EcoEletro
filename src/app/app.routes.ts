@@ -21,7 +21,7 @@ export const routes: Routes = [
     {
         path: 'enterprise',
         component: EnterpriseComponent,
-        // canActivate: [autorizedGuard]
+        canActivate: [autorizedGuard]
     },
     {
         path: '**',
