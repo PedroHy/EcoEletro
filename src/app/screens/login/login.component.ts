@@ -25,7 +25,6 @@ export class LoginComponent {
   }
 
   buttonHandler() {
-    console.log(this.cnpj, this.password)
     this.authService.singIn(this.cnpj, this.password).then(() => this.router.navigateByUrl('/enterprise'))
   }
 }

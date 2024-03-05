@@ -4,6 +4,7 @@ import { RegisterComponent } from './screens/register/register.component';
 import { MapComponent } from './screens/map/map.component';
 import { EnterpriseComponent } from './screens/enterprise/enterprise.component';
 import { autorizedGuard } from './_guard/autorized.guard';
+import { loggedGuard } from './_guard/logged.guard';
 
 export const routes: Routes = [
     {
@@ -12,11 +13,13 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+        canActivate: [loggedGuard]
     },
     {
         path: 'register',
-        component: RegisterComponent
+        component: RegisterComponent,
+        canActivate: [loggedGuard]
     },
     {
         path: 'enterprise',

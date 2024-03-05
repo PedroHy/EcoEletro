@@ -5,11 +5,10 @@
             <a class="absolute text-gray-400 text-3xl font-bold"
                href="/">⤶</a>
 
-            <h2 class="text-3xl font-bold text-center">Nome da empresa</h2>
-            <p class="w-full mt-2 text-center text-gray-400 italic">email da empresa</p>
+            <h2 class="text-3xl font-bold text-center">{{enterprise.name}}</h2>
+            <p class="w-full mt-2 text-center text-gray-400 italic">{{enterprise.email}}</p>
 
-            <button class="w-full p-2 mt-16 bg-rose-600 text-white rounded-sm">Sair</button>
-            <p class="w-full mt-2 text-center text-gray-400 italic">Data de criação</p>
+            <button class="w-full p-2 mt-16 bg-rose-600 text-white rounded-sm" (click)="logOut()">Sair</button>
         </section>
     </div>
 

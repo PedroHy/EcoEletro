@@ -24,7 +24,8 @@ export class AuthService {
     try {
       const result = await createUserWithEmailAndPassword(this.auth, email, password);
       this.user = result.user
-      localStorage.setItem("user", this.user);
+      localStorage.setItem("user", this.user.uid);
+      return(this.user.uid)
     } catch (error) {
       console.error(error);
     }
@@ -34,4 +35,8 @@ export class AuthService {
     const uid = localStorage.getItem("user")
     return uid ? true : false
   };
+
+  signOut = ()=>{
+    localStorage.setItem("user", '');
+  }
 }
