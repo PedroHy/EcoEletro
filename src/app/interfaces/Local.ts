@@ -1,4 +1,5 @@
 export interface Local{
-    uid: string,
-    adress: string
+    id?: string,
+    uid?: string,
+    adress?: string
 }
