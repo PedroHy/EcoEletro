@@ -1,0 +1,31 @@
+<div class="w-full h-full absolute top-0 left-0 bg-gray-700 bg-opacity-40 flex justify-center items-center">
+    <!-- modal -->
+    <div class="p-8 rounded bg-green-50">
+        <h2 class="mb-8 text-3xl font-bold">Adicionar local</h2>
+
+        <div class="grow flex flex-col">
+            <fieldset class="w-full flex flex-col">
+                <label class="mt-2 text-sm font-bold"
+                       for="nameLocal">Nome do local</label>
+                <input class="p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                       type="text"
+                       id="nameLocal">
+            </fieldset>
+            <fieldset class="w-full mt-4 flex flex-col">
+                <label class="mt-2 text-sm font-bold"
+                       for="address">Endereço do Local</label>
+                <input class="min-w-80 p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                       type="text"
+                       id="address">
+            </fieldset>
+
+            <fieldset class="mt-8 flex flex-col items-center">
+                <button (click)="buttonHandler()"
+                        class="w-full p-2 text-xl text-green-50 bg-green-600 hover:bg-green-700">Cadastrar</button>
+
+                <button class="w-full p-2 mt-2 text-xl text-white bg-rose-600 hover:bg-rose-700"
+                        (click)="exitClickHandler()">Cancelar</button>
+            </fieldset>
+        </div>
+    </div>
+</div>
