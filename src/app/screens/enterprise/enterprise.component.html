@@ -27,18 +27,25 @@
 
             <div class="p-8 pt-4 overflow-y-auto grid grid-cols-1 gap-4">
 
-                <!-- Vai ser clonado -->
+                @for (local of locals; track local.id) {
                 <div class="grid grid-cols-10">
                     <div class="col-span-9">
-                        <p class="text-lg">Nome do local que pode ser um tanto assim</p>
-                        <p class="text-sm text-gray-400 italic">Endereço do local pequeno pq pode ser um puta dum
-                            endereço foda
+                        <p class="text-lg">Nome do local</p>
+                        <p class="text-sm text-gray-400 italic">{{local.adress}}
                         </p>
                     </div>
                     <div class="col-span-1">
-                        <button class="text-rose-600 hover:underline cursor-pointer">Excluir</button>
+                        <button class="text-rose-600 hover:underline cursor-pointer"
+                                (click)="deleteLocal(local.id)">Excluir</button>
                     </div>
                 </div>
+                } @empty {
+                <div class="grid grid-cols-1">
+                    <div class="col-span-1">
+                        <p class="text-sm text-gray-400 italic">A empresa ainda não possúi locais</p>
+                    </div>
+                </div>
+                }
             </div>
         </section>
     </div>
