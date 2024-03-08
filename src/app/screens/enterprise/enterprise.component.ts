@@ -34,4 +34,8 @@ export class EnterpriseComponent {
   exitFormHandler() {
     this.showModal = false
   }
+
+  createLocal(local: { name: string, address: string }) {
+    this.showModal = false
+  }
 }

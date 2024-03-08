@@ -9,14 +9,16 @@
                        for="nameLocal">Nome do local</label>
                 <input class="p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
                        type="text"
-                       id="nameLocal">
+                       id="nameLocal"
+                       [(ngModel)]="localName">
             </fieldset>
             <fieldset class="w-full mt-4 flex flex-col">
                 <label class="mt-2 text-sm font-bold"
                        for="address">Endereço do Local</label>
                 <input class="min-w-80 p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
                        type="text"
-                       id="address">
+                       id="address"
+                       [(ngModel)]="address">
             </fieldset>
 
             <fieldset class="mt-8 flex flex-col items-center">

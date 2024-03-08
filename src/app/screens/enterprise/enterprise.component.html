@@ -44,6 +44,8 @@
     </div>
 
 </div>
+
 @if (showModal) {
-<app-modal (exit)="exitFormHandler()" />
+<app-modal (exit)="exitFormHandler()"
+           (create)="createLocal($event)" />
 }
