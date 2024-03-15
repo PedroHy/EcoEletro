@@ -17,6 +17,15 @@ export class LocalService {
     return doc;
   }
 
+  getLocals = async ()=>{
+    let enterpriseLocals: Local[] = []
+    const locals = (await getDocs(this.localCollection)).docs;
+    locals.forEach((local)=>{
+     enterpriseLocals.push(local.data());
+    })
+    return enterpriseLocals
+  }
+
   getLocalsByEnterprise = async (uid: string)=> {
     let enterpriseLocals: Local[] = []
     const locals = (await getDocs(this.localCollection)).docs;

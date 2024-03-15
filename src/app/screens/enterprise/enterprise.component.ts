@@ -45,12 +45,16 @@ export class EnterpriseComponent {
     this.showModal = false
   }
 
-  createLocal(local: { name: string, address: string }) {
+  createLocal(local: Local) {
     this.showModal = false
 
     this.localService.createLocal({
-      adress: local.address,
       uid: this.enterprise.uid,
+      name: local.name,
+      cep: local.cep,
+      address: local.address,
+      city: local.city,
+      state: local.state
     }).then(() => {
       if (!this.enterprise.uid) {
         return

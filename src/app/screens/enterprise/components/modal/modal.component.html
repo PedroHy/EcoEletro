@@ -6,19 +6,46 @@
         <div class="grow flex flex-col">
             <fieldset class="w-full flex flex-col">
                 <label class="mt-2 text-sm font-bold"
-                       for="nameLocal">Nome do local</label>
+                       for="nameLocal">Nome:</label>
                 <input class="p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
                        type="text"
                        id="nameLocal"
                        [(ngModel)]="localName">
             </fieldset>
+
             <fieldset class="w-full mt-4 flex flex-col">
                 <label class="mt-2 text-sm font-bold"
-                       for="address">Endereço do Local</label>
+                       for="address">Endereço:</label>
                 <input class="min-w-80 p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
                        type="text"
                        id="address"
                        [(ngModel)]="address">
+            </fieldset>
+
+            <fieldset class="w-full mt-4 flex flex-col">
+                <label class="mt-2 text-sm font-bold"
+                       for="cep">CEP:</label>
+                <input class="min-w-80 p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                       type="text"
+                       id="cep"
+                       [(ngModel)]="cep">
+            </fieldset>
+            <fieldset class="w-full mt-4 flex flex-col">
+                <label class="mt-2 text-sm font-bold"
+                       for="city">Cidade:</label>
+                <input class="min-w-80 p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                       type="text"
+                       id="city"
+                       [(ngModel)]="city">
+            </fieldset>
+
+            <fieldset class="w-full mt-4 flex flex-col">
+                <label class="mt-2 text-sm font-bold"
+                       for="state">Estado:</label>
+                <input class="min-w-80 p-1 text outline-none rounded border-gray-300 border-solid border-2 bg-transparent"
+                       type="text"
+                       id="state"
+                       [(ngModel)]="state">
             </fieldset>
 
             <fieldset class="mt-8 flex flex-col items-center">

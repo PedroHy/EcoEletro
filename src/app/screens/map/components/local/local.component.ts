@@ -9,5 +9,5 @@ import { Local } from '../../../../interfaces/Local';
   styleUrl: './local.component.css'
 })
 export class LocalComponent {
-  @Input() local?: Local = undefined
+  @Input() local: Local = {};
 }
